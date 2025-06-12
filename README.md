@@ -8,6 +8,11 @@ Este é um projeto que consome a api `Fake Store API` para um ecommerce ficticio
 
 ---
 
+## 📦 Requisitos
+
+- **Node.js** (v18 ou superior)
+- **Yarn**
+
 ## 🔧 Tecnologias usadas
 
 - [Node.js v18+](https://nodejs.org/)
@@ -19,23 +24,18 @@ Este é um projeto que consome a api `Fake Store API` para um ecommerce ficticio
 - [React Hook Form](https://react-hook-form.com/) – Biblioteca de formulários para React que fornece uma maneira simples e eficiente de lidar com inputs, validações e estados.
 - [Fake Store API](https://api.escuelajs.co/docs) - API para consumo do frontend “e-commerce style” (produtos, categorias, usuários…).
 
-## 📦 Requisitos
-
-- **Node.js** (v18 ou superior)
-- **Yarn**
-
 ---
 
 ## 🛒 Porque escolhi o `NextJS`?
 
-Para o desenvolvimento deste e-commerce, optei por utilizar o Next.js por ser um framework React moderno, robusto e altamente otimizado para aplicações web com foco em performance, SEO e escalabilidade.
+Para o desenvolvimento deste e-commerce, optei por utilizar o Next.js por ser um framework React moderno, robusto e altamente otimizado para aplicações web com foco em performance, SEO e escalabilidade. Escolhi a versao 13, a mais recente atualmente. o App/Pages Router (Next) nao existe mais nessa versao e optei justamente pelo API que ela possui para fazer um BFF pra consumir a api principal.
 
 ### Vantagens do Next.js aplicadas ao projeto:
 
 | Motivo | Explicação |
 |--|--|
-| ***Server-Side Rendering (SSR) e Static Site Generation (SSG)*** | Permitem que as páginas sejam renderizadas no servidor ou geradas estaticamente, melhorando o tempo de carregamento, a experiência do usuário e o rankeamento nos buscadores (SEO). |
-| ***Roteamento automático e dinâmico*** | Com o sistema de arquivos como base para rotas, é simples criar páginas como /produtos/[id], facilitando a criação de páginas dinâmicas para os produtos. |
+| ***Server-Side Rendering (SSR)*** | Permitem que as páginas sejam renderizadas no servidor ou geradas estaticamente, melhorando o tempo de carregamento, a experiência do usuário e o rankeamento nos buscadores (SEO). |
+| ***Roteamento*** | Com o sistema de arquivos como base para rotas, é simples criar páginas como /produtos/[id], facilitando a criação de páginas dinâmicas para os produtos. |
 | ***Otimização de imagens e performance nativa*** |  O Next.js oferece ferramentas internas para otimização de imagens, pré-carregamento inteligente de recursos e lazy loading, essenciais para um e-commerce rápido e responsivo. |
 | ***SEO-friendly*** | A possibilidade de renderizar conteúdo no servidor garante que os produtos e categorias sejam indexáveis por mecanismos de busca, aumentando a visibilidade da loja. |
 | ***Suporte robusto para autenticação e middlewares*** | Ideal para áreas como carrinho, checkout e dashboard do cliente, que exigem controle de acesso e proteção de rotas. |
@@ -144,7 +144,7 @@ yarn test:coverage
 | Feito | Item | Requisito |
 |-|------|-----------|
 |✅| **Linguagem** | TypeScript |
-|✅| **Framework/Bundler** | **Next.js** – explique no README por que escolheu 😉 |
+|✅| **Framework/Bundler** | **Next.js** |
 |✅| **UI** | Tailwind |
 |-| **Estado/Dados** | React Query, SWR, Redux Toolkit, Zustand… à sua escolha |
 |✅| **Roteamento** | App/Pages Router (Next) |
