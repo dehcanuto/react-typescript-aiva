@@ -26,6 +26,21 @@ Este é um projeto que consome a api `Fake Store API` para um ecommerce ficticio
 
 ---
 
+## 🛒 Porque escolhi o `NextJS`?
+
+Para o desenvolvimento deste e-commerce, optei por utilizar o Next.js por ser um framework React moderno, robusto e altamente otimizado para aplicações web com foco em performance, SEO e escalabilidade.
+
+### Vantagens do Next.js aplicadas ao projeto:
+
+| Motivo | Explicação |
+|--|--|
+| ***Server-Side Rendering (SSR) e Static Site Generation (SSG)*** | Permitem que as páginas sejam renderizadas no servidor ou geradas estaticamente, melhorando o tempo de carregamento, a experiência do usuário e o rankeamento nos buscadores (SEO). |
+| ***Roteamento automático e dinâmico*** | Com o sistema de arquivos como base para rotas, é simples criar páginas como /produtos/[id], facilitando a criação de páginas dinâmicas para os produtos. |
+| ***Otimização de imagens e performance nativa*** |  O Next.js oferece ferramentas internas para otimização de imagens, pré-carregamento inteligente de recursos e lazy loading, essenciais para um e-commerce rápido e responsivo. |
+| ***SEO-friendly*** | A possibilidade de renderizar conteúdo no servidor garante que os produtos e categorias sejam indexáveis por mecanismos de busca, aumentando a visibilidade da loja. |
+| ***Suporte robusto para autenticação e middlewares*** | Ideal para áreas como carrinho, checkout e dashboard do cliente, que exigem controle de acesso e proteção de rotas. |
+| ***Pronto para deploy*** | Com suporte nativo a deploy na Vercel, integração com CDNs, cache inteligente e API Routes para lidar com back-end leve, o Next.js se torna uma escolha completa para projetos que vão para o ar. |
+
 ## 🚀 Como rodar o projeto
 
 ### 1. Clone o repositório
