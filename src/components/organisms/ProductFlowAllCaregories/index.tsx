@@ -20,11 +20,11 @@ const ProductFlowAllCaregories = (): JSX.Element => {
   }, []);
 
   return (
-    <section className="py-8 px-4 2xl:px-0 antialiased md:py-16">
-      {categories.map((item: ICategories, index) => (
-        <ProductFlow key={index} {...item} />
+    <div className="p-4 antialiased">
+      {categories.map((category: ICategories, index) => (
+        <ProductFlow key={index} {...category} />
       ))}
-    </section>
+    </div>
   );
 };
 
