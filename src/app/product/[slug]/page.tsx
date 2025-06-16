@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProductSingle from '@/components/organisms/ProductSingle';
 
-export default function CategoryPage({
+export default function ProductPage({
   params,
 }: {
   params: Promise<{ slug: string }>;

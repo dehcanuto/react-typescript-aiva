@@ -22,7 +22,7 @@ const ProductFlowExtended = (category: ICategories): JSX.Element | null => {
 
   return (
     <section className="mb-8">
-      <FlowHeader title={category.name} url={category.slug} />
+      <FlowHeader title={category.name} />
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         {products.map((product, index) => (
           <ProductCard key={index} {...product} />
