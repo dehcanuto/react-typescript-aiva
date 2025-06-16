@@ -1,3 +1,9 @@
-import { ICategories } from '@/types/categories';
+import { IProduct } from '@/types/product';
 
-export type ProductFlowPropsType = ICategories;
+export interface ProductFlowPropsType {
+  products: IProduct[];
+  category: {
+    name: string;
+    slug?: string | null;
+  };
+}

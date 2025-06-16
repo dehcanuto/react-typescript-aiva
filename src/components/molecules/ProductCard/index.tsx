@@ -6,15 +6,15 @@ import { FiHeart } from 'react-icons/fi';
 import Link from 'next/link';
 
 const ProductCard = ({
-  id,
+  slug,
   title,
   images,
   price,
   category,
 }: IProduct): JSX.Element => {
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
-      <Link href={{ pathname: `product/${id}` }} className="h-56 w-full">
+    <div className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+      <Link href={{ pathname: `product/${slug}` }} className="h-56 w-full">
         <Image
           src={images[0]}
           className="mx-auto w-full h-56"
@@ -26,7 +26,7 @@ const ProductCard = ({
       <div className="flex flex-col mt-3 gap-3">
         <div className="flex items-center justify-between gap-4">
           <Link href={{ pathname: `category/${category.id}` }}>
-            <span className="rounded bg-primary-100 text-sm font-semibold">
+            <span className="w-fit bg-slate-100 text-slate-700 text-xs font-semibold me-2 px-2.5 py-0.5 rounded">
               {category.name}
             </span>
           </Link>
@@ -38,7 +38,7 @@ const ProductCard = ({
           </button>
         </div>
         <Link
-          href={{ pathname: `product/${id}` }}
+          href={{ pathname: `product/${slug}` }}
           className="mb-4 text-lg font-semibold leading-tight text-gray-900"
         >
           {title}

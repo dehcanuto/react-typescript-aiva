@@ -5,7 +5,7 @@ import { JSX, useEffect, useState } from 'react';
 import Crud from '@/services/cruds';
 
 import { ICategories } from '@/types/categories';
-import ProductFlow from '@/components/molecules/ProductFlow';
+import ProductFlowCaregory from '../ProductFlowCaregory';
 
 const ProductFlowAllCaregories = (): JSX.Element => {
   const [categories, setCategories] = useState<ICategories[]>([]);
@@ -22,7 +22,7 @@ const ProductFlowAllCaregories = (): JSX.Element => {
   return (
     <div className="p-4 antialiased">
       {categories.map((category: ICategories, index) => (
-        <ProductFlow key={index} {...category} />
+        <ProductFlowCaregory key={index} {...category} />
       ))}
     </div>
   );
