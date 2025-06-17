@@ -1,5 +1,6 @@
 # 🧪 E-Commerce - React (NextJS) + TypeScript
 ![Version](https://img.shields.io/badge/1.0.0-beta?label=version)
+![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react&logoColor=white)
 ![!Next.js](https://img.shields.io/badge/Next.js-v15.3.3-black?style=flat-square&logo=next.js)
 ![Jest](https://img.shields.io/badge/Jest-29.7.0-C21325?style=flat-square&logo=jest&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=flat-square&logo=tailwindcss&logoColor=38bdf8)
@@ -28,7 +29,7 @@ Este é um projeto que consome a api `Fake Store API` para um ecommerce ficticio
 
 ## 🛒 Porque escolhi o `NextJS`?
 
-Para o desenvolvimento deste e-commerce, optei por utilizar o Next.js por ser um framework React moderno, robusto e altamente otimizado para aplicações web com foco em performance, SEO e escalabilidade. Escolhi a versao 13, a mais recente atualmente. o App/Pages Router (Next) nao existe mais nessa versao e optei justamente pelo API que ela possui para fazer um BFF pra consumir a api principal.
+Para o desenvolvimento deste e-commerce, optei por utilizar o Next.js por ser um framework React moderno, robusto e altamente otimizado para aplicações web com foco em performance, SEO e escalabilidade. Escolhi a versao 13, a mais recente atualmente. o App/Pages Router (Next) nao existe mais nessa versao e optei justamente pelo API que ela possui para fazer um BFF (Back For Front) pra consumir a api principal.
 
 ### Vantagens do Next.js aplicadas ao projeto:
 
@@ -146,7 +147,7 @@ yarn test:coverage
 |✅| **Linguagem** | TypeScript |
 |✅| **Framework/Bundler** | **Next.js** |
 |✅| **UI** | Tailwind |
-|-| **Estado/Dados** | React Query, SWR, Redux Toolkit, Zustand… à sua escolha |
+|✅| **Estado/Dados** | Redux Toolkit |
 |✅| **Roteamento** | App/Pages Router (Next) |
 |-| **Testes** | Jest + Testing Library **e** pelo menos 1 E2E (Cypress/Playwright) |
 |✅| **Qualidade** | ESLint + Prettier, Husky/lint-staged, commits semânticos |
@@ -157,7 +158,7 @@ yarn test:coverage
 ## Como entregar 📦
 
 1. Repositório **público** no GitHub com todo o código.  
-2. **README caprichado**: setup, scripts, `.env.example`, arquitetura, link de produção, motivo do Vite/Next.  
+2. **README caprichado**: setup, scripts, `.env.example`, arquitetura, link de produção, motivo do Vite/Next.
 3. URL do **deploy** funcionando.
 
 ⏰ **Prazo de entrega**: 18/06/2025 23:59.  
