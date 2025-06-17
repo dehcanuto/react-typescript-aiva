@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 import './globals.css';
 
+import { Providers } from '@/store/providers';
 import BaseHeader from '@/components/molecules/BaseHeader';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-gray-50 ${inter.className} antialiased`}>
-        <BaseHeader />
-        {children}
+        <Providers>
+          <BaseHeader />
+          <div className="max-w-screen-xl px-4 mx-auto sm:px-0">{children}</div>
+        </Providers>
       </body>
     </html>
   );
