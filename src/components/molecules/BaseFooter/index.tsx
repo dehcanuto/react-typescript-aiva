@@ -14,8 +14,8 @@ const BaseFooter = (): JSX.Element => {
           MyEcommerce
         </Link>
         <p className="my-6 text-gray-500">
-          Open-source library of over 400+ web components and interactive
-          elements built for better web.
+          Made with ❤️ and a lot of coffee. Built by hand, with care — just for
+          you.
         </p>
         <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900">
           {menu.map((item, index) => (
