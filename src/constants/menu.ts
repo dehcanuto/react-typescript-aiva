@@ -1,26 +1,26 @@
 export const menu = [
   {
     name: 'Home',
-    slug: '',
+    slug: '/',
   },
   {
     name: 'Sebastian',
-    slug: 'sebastian',
+    slug: '/category/sebastian',
   },
   {
     name: 'Electronics',
-    slug: 'electronics',
+    slug: '/category/electronics',
   },
   {
     name: 'Furniture',
-    slug: 'furniture',
+    slug: '/category/furniture',
   },
   {
     name: 'Shoes',
-    slug: 'shoes',
+    slug: '/category/shoes',
   },
   {
     name: 'Miscellaneous',
-    slug: 'miscellaneous',
+    slug: '/category/miscellaneous',
   },
 ];

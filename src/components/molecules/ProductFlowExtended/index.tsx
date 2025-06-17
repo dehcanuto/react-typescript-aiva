@@ -1,4 +1,4 @@
-import { JSX, useEffect, useState } from 'react'
+import { JSX, useEffect, useState } from 'react';
 
 import FlowHeader from '../FlowHeader';
 import ProductCard from '../ProductCard';
