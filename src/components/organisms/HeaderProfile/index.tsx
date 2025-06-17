@@ -27,13 +27,13 @@ const HeaderProfile = (): JSX.Element => {
               className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900 gap-2"
             >
               <Image
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                alt="Rounded avatar"
+                src={user.avatar}
+                alt={user.name}
                 className="size-6 rounded-full sm:me-1.5"
                 width={24}
                 height={24}
               />
-              <span className="hidden sm:flex">My Account</span>
+              <span className="hidden sm:flex">{user.name}</span>
             </button>
           )}
         >
