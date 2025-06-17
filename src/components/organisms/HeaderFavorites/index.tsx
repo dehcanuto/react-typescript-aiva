@@ -22,7 +22,7 @@ const HeaderFavorites = (): JSX.Element => {
             </div>
           )}
         </div>
-        <span className="hidden sm:flex">Favorites</span>
+        <span className="hidden sm:flex">Wishlist</span>
       </Link>
     </div>
   );

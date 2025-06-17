@@ -11,7 +11,7 @@ import { toggleCartItem } from '@/store/cart';
 
 const HeaderCart = (): JSX.Element => {
   const dispatch = useAppDispatch();
-  
+
   const products = useAppSelector((state) => state.cart.items);
   const cartCount = products.length;
 

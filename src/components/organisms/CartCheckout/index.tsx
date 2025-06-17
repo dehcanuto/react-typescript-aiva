@@ -1,6 +1,11 @@
 'use client';
 
-import { DELIVERY_FEE, DISCOUNT_THRESHOLD, DISCOUNT_VALUE, TAX_RATE } from '@/constants/checkout';
+import {
+  DELIVERY_FEE,
+  DISCOUNT_THRESHOLD,
+  DISCOUNT_VALUE,
+  TAX_RATE,
+} from '@/constants/checkout';
 import { MoneyFormat } from '@/misc/format';
 import { useAppSelector } from '@/store/hooks';
 import Image from 'next/image';
@@ -18,11 +23,11 @@ const CartCheckout = (): JSX.Element => {
   const total = taxedBase + tax + deliveryFee;
 
   const fmt = MoneyFormat;
-  const fmtSubtotal  = fmt(subtotal);
-  const fmtDiscount  = fmt(discount);
-  const fmtDelivery  = fmt(deliveryFee);
-  const fmtTax       = fmt(tax);
-  const fmtTotal     = fmt(total);
+  const fmtSubtotal = fmt(subtotal);
+  const fmtDiscount = fmt(discount);
+  const fmtDelivery = fmt(deliveryFee);
+  const fmtTax = fmt(tax);
+  const fmtTotal = fmt(total);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -75,8 +80,8 @@ const CartCheckout = (): JSX.Element => {
           <dl>
             <dt className="text-base font-medium text-gray-900">Individual</dt>
             <dd className="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
-              Bonnie Green - +1 234 567 890, San Francisco, California, United
-              States, 3454, Scott Street
+              Billing Test Address, San Francisco, California, United States,
+              1234, Billing Test Street
             </dd>
           </dl>
         </div>
@@ -102,15 +107,19 @@ const CartCheckout = (): JSX.Element => {
               </dl>
 
               <dl className="flex items-center justify-between gap-4">
-                <dt className="text-gray-500 dark:text-gray-400">
-                  Shipping
-                </dt>
-                <dd className="text-base font-medium text-gray-900">{fmtDelivery}</dd>
+                <dt className="text-gray-500 dark:text-gray-400">Shipping</dt>
+                <dd className="text-base font-medium text-gray-900">
+                  {fmtDelivery}
+                </dd>
               </dl>
 
               <dl className="flex items-center justify-between gap-4">
-                <dt className="text-gray-500 dark:text-gray-400">Tax <small>({(TAX_RATE*100).toFixed(2)}%)</small></dt>
-                <dd className="text-base font-medium text-gray-900">{fmtTax}</dd>
+                <dt className="text-gray-500 dark:text-gray-400">
+                  Tax <small>({(TAX_RATE * 100).toFixed(2)}%)</small>
+                </dt>
+                <dd className="text-base font-medium text-gray-900">
+                  {fmtTax}
+                </dd>
               </dl>
             </div>
 
