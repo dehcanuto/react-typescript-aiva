@@ -13,9 +13,9 @@ import 'swiper/css/thumbs';
 import { IProduct } from '@/types/product';
 import Crud from '@/services/cruds';
 import { MoneyFormat } from '@/misc/format';
-import { FiShoppingCart } from 'react-icons/fi';
 import ProductFlow from '@/components/molecules/ProductFlow';
 import FavoriteButton from '../FavoriteButton';
+import CartButton from '../CartButton';
 
 const ProductSingle = ({ slug }: { slug: string }): JSX.Element | null => {
   const [product, setProduct] = useState<IProduct>();
@@ -112,14 +112,7 @@ const ProductSingle = ({ slug }: { slug: string }): JSX.Element | null => {
           <div className="mt-6 sm:gap-4 sm:flex sm:items-center sm:mt-8">
             <div className="sm:gap-4 sm:items-center sm:flex">
               <FavoriteButton {...product} extended />
-              <a
-                href="#"
-                className="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 z-10"
-                role="button"
-              >
-                <FiShoppingCart className="size-5 -ms-2 me-2" />
-                Add to cart
-              </a>
+              <CartButton {...product} />
             </div>
           </div>
         </div>
