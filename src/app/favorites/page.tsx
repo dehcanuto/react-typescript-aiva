@@ -1,12 +1,12 @@
 import FlowHeader from '@/components/molecules/FlowHeader';
 import FavoriteFlow from '@/components/organisms/FavoriteFlow';
 
-export default function SearchPage() {
+export default function FavoritesPage() {
   return (
     <div>
       <main className="max-w-screen-xl mx-auto">
         <section className="py-16">
-          <FlowHeader title="Meus Favoritos" />
+          <FlowHeader title="My Wishlist" />
           <FavoriteFlow />
         </section>
       </main>
