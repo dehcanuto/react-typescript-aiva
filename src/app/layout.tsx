@@ -5,6 +5,7 @@ import './globals.css';
 
 import { Providers } from '@/store/providers';
 import BaseHeader from '@/components/molecules/BaseHeader';
+import BaseFooter from '@/components/molecules/BaseFooter';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Providers>
           <BaseHeader />
           <div className="max-w-screen-xl px-4 mx-auto sm:px-0">{children}</div>
+          <BaseFooter />
         </Providers>
       </body>
     </html>

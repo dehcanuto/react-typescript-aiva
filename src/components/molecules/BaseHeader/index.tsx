@@ -1,12 +1,12 @@
 import { JSX } from 'react';
 import Link from 'next/link';
+import { FiMenu, FiSearch } from 'react-icons/fi';
 
 import HeaderSearch from '@/components/organisms/HeaderSearch';
 import HeaderFavorites from '@/components/organisms/HeaderFavorites';
 import HeaderCart from '@/components/organisms/HeaderCart';
 import HeaderProfile from '@/components/organisms/HeaderProfile';
 import { menu } from '@/constants/menu';
-import { FiMenu, FiSearch } from 'react-icons/fi';
 
 const BaseHeader = (): JSX.Element => {
   return (
