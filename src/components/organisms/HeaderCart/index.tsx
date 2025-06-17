@@ -36,7 +36,8 @@ const HeaderCart = (): JSX.Element => {
         )}
       >
         <div className="w-full max-w-xs">
-          <ul>
+          {products.length ? (
+            <ul>
             {products.map((item) => (
               <li key={item.id} className="flex items-center hover:bg-slate-50">
                 <div className="flex flex-col w-full p-4">
@@ -62,6 +63,9 @@ const HeaderCart = (): JSX.Element => {
               </li>
             ))}
           </ul>
+          ) : (
+            <span className="flex p-4 text-sm">Sem produtos no carrinho</span>
+          )}
         </div>
         <div className="border-slate-200 text-gray-700">
           <Link
