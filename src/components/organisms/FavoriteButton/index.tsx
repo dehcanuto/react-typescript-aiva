@@ -28,7 +28,7 @@ const FavoriteButton = (product: FavoriteButtonPropType): JSX.Element => {
       ) : (
         <FiHeart className="size-5" />
       )}
-      {product.extended && 'Add to favorites'}
+      {product.extended && <span className="text-black">Add to favorites</span>}
     </button>
   );
 };
