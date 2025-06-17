@@ -1,15 +1,11 @@
 'use client';
 
+import { DELIVERY_FEE, DISCOUNT_THRESHOLD, DISCOUNT_VALUE, TAX_RATE } from '@/constants/checkout';
 import { MoneyFormat } from '@/misc/format';
 import { useAppSelector } from '@/store/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { JSX } from 'react';
-
-const TAX_RATE = 0.0825;
-const DELIVERY_FEE = 100;
-const DISCOUNT_VALUE = 100;
-const DISCOUNT_THRESHOLD = 200;
 
 const CartCheckout = (): JSX.Element => {
   const products = useAppSelector((state) => state.cart.items);
