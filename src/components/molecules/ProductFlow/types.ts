@@ -6,4 +6,5 @@ export interface ProductFlowPropsType {
     name: string;
     slug?: string | null;
   };
+  loading: boolean;
 }

@@ -122,6 +122,7 @@ const ProductSingle = ({ slug }: { slug: string }): JSX.Element | null => {
           <ProductFlow
             products={related}
             category={{ name: 'Produtos relacionados' }}
+            loading={false}
           />
         )}
       </div>

@@ -23,8 +23,6 @@ export default function CategoryPage({
     getCategory(slug);
   }, [slug]);
 
-  if (!category) return <p>Carregando...</p>;
-
   return (
     <div className="py-8">
       {category && <ProductFlowExtended {...category} />}

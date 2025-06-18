@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 import { ICategories } from '@/types/categories';
 import FlowHeader from '@/components/molecules/FlowHeader';
+import SkeletonCategoryWidget from '@/components/molecules/SkeletonCategoryWidget';
 
 const ProductCategories = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -34,12 +35,7 @@ const ProductCategories = (): JSX.Element => {
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {loading ? (
           Array.from({ length: 4 }).map((_, index) => (
-            <div key={index} className="animate-pulse">
-              <div className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 gap-4">
-                <span className="size-10 bg-slate-200 rounded-full"></span>
-                <span className="flex w-40 h-4 bg-slate-200 rounded"></span>
-              </div>
-            </div>
+            <SkeletonCategoryWidget key={index} />
           ))
         ) : categories.length === 0 ? (
           <div className="col-span-full text-center text-gray-500 text-sm">
