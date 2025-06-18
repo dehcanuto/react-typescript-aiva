@@ -146,6 +146,10 @@ Para rodar o E2E execute este comando:
 yarn e2e
 ```
 
+Resultado do e2e:
+
+![Coverage](.github/playwright.png)
+
 ---
 
 ## ✅ To-do
