@@ -7,9 +7,9 @@ import { IProduct } from '@/types/product';
 
 const favoritesAdapter = createEntityAdapter<IProduct>();
 
-type FavoritesState = ReturnType<typeof favoritesAdapter.getInitialState> & {
+export interface FavoritesState {
   products: IProduct[];
-};
+}
 
 const initialState: FavoritesState = favoritesAdapter.getInitialState({
   products: [],
@@ -19,18 +19,12 @@ export const favoritesSlice = createSlice({
   name: 'favorites',
   initialState,
   reducers: {
-    toggleFavorite: (state, action: PayloadAction<IProduct>) => {
-      const product = action.payload;
-      const alreadyFav = state.products.some((p) => p.id === product.id);
-
-      if (alreadyFav) {
-        favoritesAdapter.removeOne(state, product.id);
-        state.products = state.products.filter(
-          (prod) => prod.id !== product.id
-        );
+    toggleFavorite(state, action: PayloadAction<IProduct>) {
+      const index = state.products.findIndex(p => p.id === action.payload.id);
+      if (index !== -1) {
+        state.products.splice(index, 1);
       } else {
-        favoritesAdapter.addOne(state, product);
-        state.products.push(product);
+        state.products.push(action.payload);
       }
     },
   },

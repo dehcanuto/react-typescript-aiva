@@ -1,42 +1,28 @@
-import {
-  createSlice,
-  createEntityAdapter,
-  PayloadAction,
-} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IProduct } from '@/types/product';
 
-const cartAdapter = createEntityAdapter<IProduct>();
-
-type CartState = ReturnType<typeof cartAdapter.getInitialState> & {
+export interface CartState {
   items: IProduct[];
+}
+
+const initialState: CartState = {
+  items: [],
 };
 
-const initialState: CartState = cartAdapter.getInitialState({
-  items: [],
-});
-
-export const cartSlice = createSlice({
+const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    toggleCartItem: (state, action: PayloadAction<IProduct>) => {
-      const product = action.payload;
-      const exists = state.items.some((p) => p.id === product.id);
-
-      if (exists) {
-        cartAdapter.removeOne(state, product.id);
-        state.items = state.items.filter((p) => p.id !== product.id);
+    toggleCartItem(state, action: PayloadAction<IProduct>) {
+      const index = state.items.findIndex(p => p.id === action.payload.id);
+      if (index !== -1) {
+        state.items.splice(index, 1);
       } else {
-        cartAdapter.addOne(state, product);
-        state.items.push(product);
+        state.items.push(action.payload);
       }
-    },
-    clearCart: (state) => {
-      cartAdapter.removeAll(state);
-      state.items = [];
     },
   },
 });
 
-export const { toggleCartItem, clearCart } = cartSlice.actions;
+export const { toggleCartItem } = cartSlice.actions;
 export default cartSlice.reducer;
