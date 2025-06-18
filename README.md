@@ -71,7 +71,7 @@ Preferi deixar o `.env` livre no repositório para encurtar os passos para rodar
 yarn dev
 ```
 
-O projeto será apresentado através do link [http://localhost:5173](http://localhost:5173).
+O projeto será apresentado através do link [http://localhost:3000](http://localhost:3000).
 
 # 🧹 Rodando o Lint
 
@@ -93,6 +93,14 @@ Alguns erros podem ser corrigidos automaticamente com:
 yarn lint --fix
 ```
 
+### Identar o código
+
+Caso queira identar automáticamente, utilize este comando:
+
+```bash
+yarn format
+```
+
 ---
 
 # 🧪 Rodando os Testes
@@ -100,7 +108,7 @@ yarn lint --fix
 Para garantir que tudo está funcionando corretamente, siga estes passos para rodar os testes do projeto:
 
 ## 1. Execute os testes
-Para rodar todos os testes com Jest:
+Para rodar todos os testes com Jest + Testing Library:
 
 ```bash
 yarn test
@@ -120,6 +128,14 @@ Para rodar a cobertura de testes, basta executar esse comando no terminal:
 
 ```bash
 yarn test:coverage
+```
+
+## 4. Playwright
+
+Para rodar o E2E execute este comando:
+
+```bash
+yarn e2e
 ```
 
 ---
