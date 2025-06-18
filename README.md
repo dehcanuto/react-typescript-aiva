@@ -74,6 +74,8 @@ yarn dev
 
 O projeto será apresentado através do link [http://localhost:3000](http://localhost:3000).
 
+E no Vercel voce poderá visualizar através deste link através do link [https://react-typescript-aiva.vercel.app/](https://react-typescript-aiva.vercel.app/).
+
 # 🧹 Rodando o Lint
 
 Para manter a qualidade do código e seguir boas práticas, este projeto utiliza o ESLint com regras específicas para TypeScript e React.
@@ -151,6 +153,14 @@ Resultado do e2e:
 
 ![Coverage](.github/playwright.png)
 
+## Deploy
+
+Escolhi o Vercel pois já tinha conta e seria mais fácil de fazer.
+
+Voce pode acessar diretamente [aqui](https://react-typescript-aiva.vercel.app/)
+ou copiar o link no seu navegador: `https://react-typescript-aiva.vercel.app/`
+
+
 ---
 
 ## ✅ To-do
@@ -163,7 +173,7 @@ Resultado do e2e:
 
 **EXTRAS**
 
-- [ ] Code splitting & lazy loading  
+- [x] Code splitting & lazy loading  
 - [x] Web Vitals e otimização de imagens  
 - [x] Design System/componentes reutilizáveis
 - [x] Documentação clara no **README.md**
@@ -180,7 +190,7 @@ Resultado do e2e:
 |✅| **Roteamento** | App/Pages Router (Next) |
 |✅| **Testes** | Jest + Testing Library **e** pelo menos 1 E2E (Cypress/Playwright) |
 |✅| **Qualidade** | ESLint + Prettier, Husky/lint-staged, commits semânticos |
-|-| **Deploy** | Vercel, Netlify, Render, Railway… versão grátis tá ótimo |
+|✅| **Deploy** | Vercel |
 
 ---
 
