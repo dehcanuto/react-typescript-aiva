@@ -1,4 +1,4 @@
-import SignupFlow from "@/components/organisms/SignupFlow";
+import SignupFlow from '@/components/organisms/SignupFlow';
 
 export default function SignupPage() {
   return (

@@ -35,12 +35,11 @@ const SignupFlow = (): JSX.Element => {
       const res: IUser = await Crud.add('users', {
         ...data,
         role: 'customer',
-        avatar: 'https://api.escuelajs.co/api/v1/files/132d.png'
+        avatar: 'https://api.escuelajs.co/api/v1/files/132d.png',
       });
 
-      dispatch(login(res))
+      dispatch(login(res));
       router.push('/');
-
     } catch (error) {
       console.log(error);
     } finally {

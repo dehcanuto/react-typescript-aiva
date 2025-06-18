@@ -17,7 +17,7 @@ const CartButton = (product: IProduct): JSX.Element => {
   return (
     <button
       onClick={() => dispatch(toggleCartItem(product))}
-      aria-label={isInCart ? 'Remover do carrinho' : 'Adicionar ao carrinho'}
+      aria-label={!isInCart ? 'Add to cart' : 'Added to cart'}
       className={`flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 rounded-lg border transition cursor-pointer ${
         isInCart
           ? 'bg-green-500 text-white'

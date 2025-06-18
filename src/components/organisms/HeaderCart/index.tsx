@@ -38,31 +38,34 @@ const HeaderCart = (): JSX.Element => {
         <div className="w-full max-w-xs">
           {products.length ? (
             <ul>
-            {products.map((item) => (
-              <li key={item.id} className="flex items-center hover:bg-slate-50">
-                <div className="flex flex-col w-full p-4">
-                  <Link
-                    href={{ pathname: `/product/${item.slug}` }}
-                    className="w-50 truncate text-sm font-semibold leading-none text-gray-900 hover:underline"
-                  >
-                    {item.title}
-                  </Link>
-                  <p className="mt-0.5 truncate text-sm font-normal text-gray-500 text-gray-400">
-                    {MoneyFormat(item.price)}
-                  </p>
-                </div>
-                <div className="flex items-center justify-end">
-                  <button
-                    type="button"
-                    onClick={() => dispatch(toggleCartItem(item))}
-                    className="p-3 me-2 text-red-600 bg-white cursor-pointer rounded-lg hover:bg-red-50"
-                  >
-                    <FiTrash2 />
-                  </button>
-                </div>
-              </li>
-            ))}
-          </ul>
+              {products.map((item) => (
+                <li
+                  key={item.id}
+                  className="flex items-center hover:bg-slate-50"
+                >
+                  <div className="flex flex-col w-full p-4">
+                    <Link
+                      href={{ pathname: `/product/${item.slug}` }}
+                      className="w-50 truncate text-sm font-semibold leading-none text-gray-900 hover:underline"
+                    >
+                      {item.title}
+                    </Link>
+                    <p className="mt-0.5 truncate text-sm font-normal text-gray-500 text-gray-400">
+                      {MoneyFormat(item.price)}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-end">
+                    <button
+                      type="button"
+                      onClick={() => dispatch(toggleCartItem(item))}
+                      className="p-3 me-2 text-red-600 bg-white cursor-pointer rounded-lg hover:bg-red-50"
+                    >
+                      <FiTrash2 />
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
           ) : (
             <span className="flex p-4 text-sm">Sem produtos no carrinho</span>
           )}

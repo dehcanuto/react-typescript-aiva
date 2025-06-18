@@ -25,9 +25,9 @@ const SigninFlow = (): JSX.Element => {
       setLoading(true);
       const res = await Crud.add('auth/login', data);
       console.log('login', res);
-      
-    //   Login nao manda as infos do usuario e o endpoint ta mal documentado no swagger.
-    //   Tentei mandar via Bearer mas sempre dava 'não autorizado'.
+
+      //   Login nao manda as infos do usuario e o endpoint ta mal documentado no swagger.
+      //   Tentei mandar via Bearer mas sempre dava 'não autorizado'.
     } catch (error) {
       console.log(error);
     } finally {
