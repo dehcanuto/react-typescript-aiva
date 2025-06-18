@@ -23,9 +23,7 @@ const SigninFlow = (): JSX.Element => {
   const onSubmit = async (data: LoginForm) => {
     try {
       setLoading(true);
-      const res = await Crud.add('auth/login', data);
-      console.log('login', res);
-
+      await Crud.add('auth/login', data);
       //   Login nao manda as infos do usuario e o endpoint ta mal documentado no swagger.
       //   Tentei mandar via Bearer mas sempre dava 'não autorizado'.
     } catch (error) {

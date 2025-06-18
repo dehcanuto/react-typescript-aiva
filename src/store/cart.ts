@@ -14,7 +14,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     toggleCartItem(state, action: PayloadAction<IProduct>) {
-      const index = state.items.findIndex(p => p.id === action.payload.id);
+      const index = state.items.findIndex((p) => p.id === action.payload.id);
       if (index !== -1) {
         state.items.splice(index, 1);
       } else {

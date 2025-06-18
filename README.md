@@ -114,6 +114,10 @@ Para rodar todos os testes com Jest + Testing Library:
 yarn test
 ```
 
+Resultado dos testes:
+
+![Jest Tests](.github/jest.tests.png)
+
 ## 2. Rodando os testes em modo watch (assistir alterações)
 
 Para rodar os testes continuamente enquanto desenvolve:
@@ -129,6 +133,10 @@ Para rodar a cobertura de testes, basta executar esse comando no terminal:
 ```bash
 yarn test:coverage
 ```
+
+Resultado de cobertura de testes:
+
+![Coverage](.github/jest.coverage.png)
 
 ## 4. Playwright
 
