@@ -28,7 +28,7 @@ const ProductCategories = (): JSX.Element => {
         {categories.map((item: ICategories, index) => (
           <Link
             key={index}
-            href={item.slug}
+            href={`/category/${item.slug}`}
             className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50 gap-4"
           >
             <Image

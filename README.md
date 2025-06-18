@@ -155,19 +155,19 @@ Resultado do e2e:
 
 ## ✅ To-do
 
-- [ ] Fluxo de autenticação caso a API suporte (login, registro ou uso de token).
-- [ ] Dashboard principal com listagem, busca e/ou filtros relevantes.
-- [ ] Operações de CRUD (criar, editar, remover) para pelo menos um recurso-chave.
-- [ ] Página de detalhe para um item individual.
-- [ ] Responsividade e feedback visual (loading, estados vazios, erros).
+- [x] Fluxo de autenticação caso a API suporte (login, registro ou uso de token).
+- [x] Dashboard principal com listagem, busca e/ou filtros relevantes.
+- [x] Operações de CRUD (criar, editar, remover) para pelo menos um recurso-chave.
+- [x] Página de detalhe para um item individual.
+- [x] Responsividade e feedback visual (loading, estados vazios, erros).
 
 **EXTRAS**
 
-- Code splitting & lazy loading  
-- Web Vitals e otimização de imagens  
-- Design System/componentes reutilizáveis
-- Documentação clara no **README.md**
-- CI GitHub Actions (lint, build, testes)
+- [ ] Code splitting & lazy loading  
+- [x] Web Vitals e otimização de imagens  
+- [x] Design System/componentes reutilizáveis
+- [x] Documentação clara no **README.md**
+- [x] CI GitHub Actions (lint, build, testes)
 
 **Stack (mínimo obrigatório)**
 
@@ -178,7 +178,7 @@ Resultado do e2e:
 |✅| **UI** | Tailwind |
 |✅| **Estado/Dados** | Redux Toolkit |
 |✅| **Roteamento** | App/Pages Router (Next) |
-|-| **Testes** | Jest + Testing Library **e** pelo menos 1 E2E (Cypress/Playwright) |
+|✅| **Testes** | Jest + Testing Library **e** pelo menos 1 E2E (Cypress/Playwright) |
 |✅| **Qualidade** | ESLint + Prettier, Husky/lint-staged, commits semânticos |
 |-| **Deploy** | Vercel, Netlify, Render, Railway… versão grátis tá ótimo |
 
