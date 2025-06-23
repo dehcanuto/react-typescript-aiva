@@ -30,9 +30,9 @@ const ProductCategories = (): JSX.Element => {
   }, []);
 
   return (
-    <section className="mt-10 p-4 2xl:px-0 antialiased">
+    <section className="sm:mt-10 p-4 2xl:px-0 antialiased">
       <FlowHeader title="Products by category" url="/" />
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {loading ? (
           Array.from({ length: 4 }).map((_, index) => (
             <SkeletonCategoryWidget key={index} />

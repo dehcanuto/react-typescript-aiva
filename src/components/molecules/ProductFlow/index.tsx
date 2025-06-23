@@ -28,11 +28,10 @@ const ProductFlow = ({
       ) : (
         <Swiper
           spaceBetween={20}
-          slidesPerView={3}
           breakpoints={{
-            640: { slidesPerView: 1.5 },
+            0: { slidesPerView: 1.5 },
             768: { slidesPerView: 2.5 },
-            1024: { slidesPerView: 4.5 },
+            1024: { slidesPerView: 3.5 },
           }}
         >
           {products.map((product, index) => (

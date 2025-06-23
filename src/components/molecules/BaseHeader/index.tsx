@@ -1,4 +1,6 @@
-import { JSX } from 'react';
+"use client"
+
+import { JSX, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { FiMenu, FiSearch } from 'react-icons/fi';
 
@@ -9,6 +11,28 @@ import HeaderProfile from '@/components/organisms/HeaderProfile';
 import { menu } from '@/constants/menu';
 
 const BaseHeader = (): JSX.Element => {
+  const [viewMobileMenu, setViewMobileMenu] = useState<boolean>(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+
+      if (
+        viewMobileMenu &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        setViewMobileMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [viewMobileMenu]);
+
   return (
     <nav className="bg-white bg-gray-800 antialiased">
       <div className="max-w-screen-xl px-4 mx-auto sm:px-0">
@@ -35,9 +59,9 @@ const BaseHeader = (): JSX.Element => {
               <button
                 type="button"
                 className="flex sm:hidden items-center rounded-lg justify-center gap-2 p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
+                onClick={() => setViewMobileMenu(!viewMobileMenu)}
               >
                 <FiMenu className="size-5 text-gray-900" />
-                Menu
               </button>
             </div>
           </div>
@@ -61,7 +85,7 @@ const BaseHeader = (): JSX.Element => {
             </button>
           </div>
         </form>
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 py-4 sm:gap-4">
+        <div className="relative flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 py-4 sm:gap-4">
           <div className="flex items-center">
             <ul className="items-center hidden sm:flex gap-8">
               {menu.map((item, index) => (
@@ -76,20 +100,22 @@ const BaseHeader = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <div className="w-full bg-gray-50 text-gray-700 border-gray-600 border border-slate-200 rounded-lg py-3 hidden px-4 mt-2">
-            <ul className="text-gray-900 text-sm font-medium">
-              {menu.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={{ pathname: item.slug }}
-                    className="hover:text-primary-700"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {viewMobileMenu && (
+            <div ref={mobileMenuRef} className="absolute top-0 w-full py-3 px-4 bg-gray-50 text-gray-700 border-gray-600 border border-slate-200 rounded-lg z-50">
+              <ul className="flex flex-col text-gray-900 text-sm font-medium gap-5">
+                {menu.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={{ pathname: item.slug }}
+                      className="hover:text-primary-700"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </nav>

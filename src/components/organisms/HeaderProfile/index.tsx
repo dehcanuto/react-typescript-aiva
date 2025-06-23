@@ -79,7 +79,7 @@ const HeaderProfile = (): JSX.Element => {
           className="flex items-center ms-2 text-sm font-medium leading-none text-gray-900 cursor-pointer gap-3"
         >
           <FiUser className="text-lg" />
-          Signin
+          <span className="hidden sm:flex">Signin</span>
         </Link>
       )}
     </div>
